@@ -1,0 +1,19 @@
+@import 'card';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsla(240, 20%, 97%, 1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  margin: 10px;
+}

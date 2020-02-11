@@ -1,0 +1,71 @@
+.card {
+  overflow: hidden;
+  contain: layout;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: hsl(150, 75%, 10%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "img title"
+    "img email"
+    "img button";
+
+  &__button {
+    grid-area: button;
+    display: block;
+    padding: 10px;
+    background: hsl(90, 70%, 75%);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    font-weight: bold;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(0.95);
+      background: hsl(100, 75%, 65%);
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: -10px;
+    }
+  }
+
+  &__image {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__subtitle {
+    display: block;
+    grid-area: email;
+  }
+}
+
+.card-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+}

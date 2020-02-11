@@ -1,0 +1,21 @@
+<%- include('../partials/doc-start', {title: 'Default Template'}) %>
+
+<main>
+  <h1 class="title">Meet The Team!</h1>
+
+  <ul id="card-container" class="card-list">
+
+  </ul>
+</main>
+
+<template id="card-template">
+  <li class="card-list__item">
+    <article class="card">
+      <h1 class="card__title"></h1>
+      <span class="card__subtitle"></span>
+      <img src="" alt="" class="card__image">
+      <a href="" class="card__button">Contact Me!</a>
+    </article>
+  </li>
+</template>
+<%- include('../partials/doc-end') %>
